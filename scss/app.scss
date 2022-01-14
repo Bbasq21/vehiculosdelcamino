@@ -1,0 +1,73 @@
+@function remcalc($size) {
+    $remSize: $size / 16px;
+    //Default font size on html element is 100%, equivalent to 16px;
+    @return #{$remSize}rem;
+}
+  
+  // Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+    font-size: $size;
+    font-size: remcalc($size);
+}
+:root{
+    font-size: 100%;
+}
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/accordion";
+
+$red: #8e1c2e;
+$white: #fff;
+$black: #000;
+$black99: #101010;
+$black80: #575757;
+$black60: #888;
+$black40: #b4b4b4;
+$black20: #dcdcdc;
+
+$font: 'Mazda Type',helvetica,arial,sans-serif;
+
+@import "fonts";
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.pad-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@import "header";
+@import "slider";
+@import "noticias";
+@import "faqs";
+@import "contactanos";
+@import "footer";
+
+@include media-breakpoint-up(xxl) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 80%;
+    }
+}

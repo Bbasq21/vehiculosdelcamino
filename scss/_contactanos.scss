@@ -1,0 +1,78 @@
+#contactanos{
+    background: url(../img/cx-5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 0 80px;
+
+    h3{
+        width: fit-content;
+        color: $white;
+        font-family: $font;
+        font-size: remcalc(35px);
+        font-weight: 700;
+        margin: 0 auto 50px;
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+
+        &::after{
+            background-color: $white;
+            content: "";
+            width: 100%;
+            height: 2px;
+            top: 100%;
+            left: 0;
+            position: absolute;
+            transition: ease-in-out .5s;
+        }
+    }
+    .field{
+        width: 100%;
+        height: 50px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 2px;
+        margin: 0 0 20px;
+        padding: 0 10px;
+        opacity: 0.8;
+
+        &::placeholder{
+            font-family: $font;
+        }
+    }
+    select{
+        width: 100%;
+        height: 50px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 2px;
+        padding: 0 10px;
+        opacity: 0.8;
+    }
+    textarea{
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 2px;
+        padding: 8px 10px 0;
+        opacity: 0.8;
+    }
+    button{
+        width: 215px;
+        height: 46px;
+        background: $white;
+        border-radius: 2px;
+        color: $black99;
+        font-family: $font;
+        font-size: remcalc(25px);
+        font-weight: 700;
+        margin: 50px auto 0;
+        text-transform: uppercase;
+        transition: ease-in-out .5s;
+
+        &:hover{
+            background: $red;
+            color: $white;
+        }
+    }
+}
