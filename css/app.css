@@ -4434,11 +4434,13 @@ header {
       width: 75%;
       display: flex;
       justify-content: space-evenly;
-      align-items: center; } }
+      align-items: center; }
+      header .menu .search {
+        min-width: 225px; } }
   @media (min-width: 1400px) {
     header .menu {
       flex: 0 0 auto;
-      width: 50%; } }
+      width: 60%; } }
   header .menu .item-menu {
     color: #fff;
     font-family: "Mazda Type", helvetica, arial, sans-serif;
@@ -4461,7 +4463,6 @@ header {
       header .menu .item-menu:hover::after {
         background-color: #8e1c2e; }
   header .menu .search {
-    min-width: 225px;
     border: solid 1px #fff;
     border-radius: 20px;
     position: relative; }
@@ -4488,6 +4489,28 @@ header {
     width: 100%;
     position: fixed;
     z-index: 99; }
+
+@media (max-width: 600px) {
+  header img {
+    margin: 0; }
+  header .menu {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #101010;
+    z-index: 99;
+    top: 0;
+    left: 100%; }
+    header .menu .item-menu {
+      width: fit-content;
+      margin: 15px auto;
+      text-align: center; }
+    header .menu .search {
+      width: 70%;
+      margin: 20px auto 0; } }
 
 #slider {
   height: calc(100vh - 100px); }
@@ -4589,20 +4612,34 @@ header {
       font-size: 0.875rem;
       font-weight: 400;
       line-height: 18px; }
+    @media (min-width: 1200px) {
+      #noticias .text h4, #noticias .text .h4 {
+        color: #101010;
+        font-family: "Mazda Type", helvetica, arial, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 5% 0 20px; }
+      #noticias .text p {
+        color: #101010;
+        font-family: "Mazda Type", helvetica, arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 18px; } }
     @media (min-width: 1400px) {
       #noticias .text h4, #noticias .text .h4 {
         color: #101010;
         font-family: "Mazda Type", helvetica, arial, sans-serif;
-        font-size: 1.625rem;
+        font-size: 1.5rem;
         font-weight: 700;
         line-height: 24px;
-        margin: 10% 0 30px; }
+        margin: 5% 0 20px; }
       #noticias .text p {
         color: #101010;
         font-family: "Mazda Type", helvetica, arial, sans-serif;
-        font-size: 1.125rem;
+        font-size: 1rem;
         font-weight: 400;
-        line-height: 24px; } }
+        line-height: 18px; } }
 
 #faqs {
   padding: 100px 0 80px; }
@@ -4725,16 +4762,26 @@ footer {
   padding: 60px 0; }
   footer .menu a {
     color: #101010;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: ease-in-out .5s; }
     footer .menu a li {
       color: #101010;
       font-family: "Mazda Type", helvetica, arial, sans-serif;
       font-size: 1.25rem;
       list-style: none;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      transition: ease-in-out .5s; }
       footer .menu a li span {
         color: #8e1c2e;
-        font-size: 1rem; }
+        font-size: 1rem;
+        transform: rotate(0deg);
+        transition: ease-in-out .5s; }
+    footer .menu a:hover {
+      color: #8e1c2e; }
+      footer .menu a:hover li {
+        color: #8e1c2e; }
+        footer .menu a:hover li span {
+          transform: rotate(180deg); }
   footer p {
     font: normal normal normal 19px/23px "Mazda Type", helvetica, arial, sans-serif;
     color: #000000;

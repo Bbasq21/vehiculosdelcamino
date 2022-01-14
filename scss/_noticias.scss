@@ -52,21 +52,38 @@
             font-weight: 400;
             line-height: 18px;
         }
-        @include media-breakpoint-up(xxl) {
+        @include media-breakpoint-up(xl){
             h4{
                 color: $black99;
                 font-family: $font;
-                font-size: remcalc(26px);
+                font-size: remcalc(24px);
                 font-weight: 700;
                 line-height: 24px;
-                margin: 10% 0 30px;
+                margin: 5% 0 20px;
             }
             p{
                 color: $black99;
                 font-family: $font;
-                font-size: remcalc(18px);
+                font-size: remcalc(16px);
                 font-weight: 400;
+                line-height: 18px;
+            } 
+        }
+        @include media-breakpoint-up(xxl) {
+            h4{
+                color: $black99;
+                font-family: $font;
+                font-size: remcalc(24px);
+                font-weight: 700;
                 line-height: 24px;
+                margin: 5% 0 20px;
+            }
+            p{
+                color: $black99;
+                font-family: $font;
+                font-size: remcalc(16px);
+                font-weight: 400;
+                line-height: 18px;
             } 
         }
     }

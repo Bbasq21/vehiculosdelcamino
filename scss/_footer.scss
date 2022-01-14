@@ -6,6 +6,7 @@ footer{
         a{
             color: $black99;
             text-decoration: none;
+            transition: ease-in-out .5s;
 
             li{
                 color: $black99;
@@ -13,10 +14,24 @@ footer{
                 font-size: remcalc(20px);
                 list-style: none;
                 margin-bottom: 10px;
+                transition: ease-in-out .5s;
 
                 span{
                     color: $red;
                     font-size: remcalc(16px);
+                    transform: rotate(0deg);
+                    transition: ease-in-out .5s;
+                }
+            }
+            &:hover{
+                color: $red;
+
+                li{
+                    color: $red;
+
+                    span{
+                        transform: rotate(180deg);
+                    }
                 }
             }
         }
