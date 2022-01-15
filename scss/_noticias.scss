@@ -88,3 +88,17 @@
         }
     }
 }
+@media (max-width: 600px) {
+    #noticias{
+        .text{
+            order: 2;
+
+            h4{
+                font-size: remcalc(20px);
+            }
+            p{
+                font-size: remcalc(16px);
+            }
+        }
+    }
+}

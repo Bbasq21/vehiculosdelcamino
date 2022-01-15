@@ -68,3 +68,47 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    #slider{
+        height: calc(100vh - 100px);
+    
+        .slide{
+            height: 89.4vh;
+            position: relative;
+    
+            &:nth-child(1){
+                background: url(../img/home-m2-mobile.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            &:nth-child(2){
+                background: url(../img/home-m3-mobile.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+
+            h3{
+                color: $white;
+                font-family: $font;
+                font-size: remcalc(70px);
+                font-weight: 700;
+                line-height: 1;
+                position: absolute;
+                text-align: center;
+                text-transform: uppercase;
+                top: 15%;
+                left: 50%;
+                transform: translateX(-50%);
+    
+                span{
+                    display: block;
+                    font-size: remcalc(28px);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

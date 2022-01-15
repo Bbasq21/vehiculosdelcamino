@@ -1,4 +1,10 @@
 $(document).ready(function () {
+	$('.hamburger').click(function() {
+		$('header .hamburger').toggleClass('is-active');
+		$('header .menu').toggleClass('is-active');
+		return false;
+	});
+
 	var altura = $('header').offset().top;
 	$(window).scroll(function () {
 		if ($(window).scrollTop() > altura) {
@@ -7,12 +13,15 @@ $(document).ready(function () {
 			$('header').removeClass('fixed');
 		}
 	});
+
 	$('#slider').slick({
 		dots: false,
 		infinite: true,
 		speed: 500,
 		fade: true,
 		cssEase: 'linear',
+		autoplay: true,
+  		autoplaySpeed: 2000,
 		slidesToShow: 1,
 		adaptiveHeight: true,
 		responsive: [{

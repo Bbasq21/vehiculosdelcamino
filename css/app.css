@@ -4491,26 +4491,80 @@ header {
     z-index: 99; }
 
 @media (max-width: 600px) {
-  header img {
-    margin: 0; }
-  header .menu {
-    display: flex;
-    flex-direction: column;
-    padding: 80px 0 0;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: #101010;
-    z-index: 99;
-    top: 0;
-    left: 100%; }
-    header .menu .item-menu {
-      width: fit-content;
-      margin: 15px auto;
-      text-align: center; }
-    header .menu .search {
-      width: 70%;
-      margin: 20px auto 0; } }
+  header {
+    position: relative; }
+    header img {
+      margin: 0; }
+    header .menu {
+      display: flex;
+      flex-direction: column;
+      padding: 80px 0 0;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: #101010;
+      z-index: 99;
+      top: 0;
+      left: 100%;
+      transition: ease-in-out .5s; }
+      header .menu .item-menu {
+        width: fit-content;
+        margin: 15px auto;
+        text-align: center; }
+      header .menu .search {
+        width: 70%;
+        margin: 20px auto 0; }
+      header .menu.is-active {
+        left: 0; }
+    header .hamburger {
+      position: fixed;
+      background-color: transparent;
+      right: 10%;
+      top: 20px;
+      height: 30px;
+      width: 30px;
+      padding: 20px 20px;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      z-index: 1002;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+    header .hamburger.is-active {
+      background-color: none; }
+    header ._layer {
+      background: #ffffff;
+      margin-bottom: 4px;
+      border-radius: 2px;
+      width: 28px;
+      height: 4px;
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98); }
+    header .hamburger:hover .-top {
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      transform: translateY(-100%); }
+    header .hamburger:hover .-bottom {
+      -webkit-transform: translateY(50%);
+      -ms-transform: translateY(100%);
+      transform: translateY(100%); }
+    header .hamburger.is-active .-top {
+      -webkit-transform: translateY(200%) rotate(45deg) !important;
+      -ms-transform: translateY(200%) rotate(45deg) !important;
+      transform: translateY(200%) rotate(45deg) !important; }
+    header .hamburger.is-active .-mid {
+      opacity: 0; }
+    header .hamburger.is-active .-bottom {
+      -webkit-transform: translateY(-200%) rotate(135deg) !important;
+      -ms-transform: translateY(-200%) rotate(135deg) !important;
+      transform: translateY(-200%) rotate(135deg) !important; } }
 
 #slider {
   height: calc(100vh - 100px); }
@@ -4567,6 +4621,39 @@ header {
         color: #dcdcdc; }
         #slider .slide a:hover::after {
           background-color: transparent; }
+
+@media (max-width: 600px) {
+  #slider {
+    height: calc(100vh - 100px); }
+    #slider .slide {
+      height: 89.4vh;
+      position: relative; }
+      #slider .slide:nth-child(1) {
+        background: url(../img/home-m2-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      #slider .slide:nth-child(2) {
+        background: url(../img/home-m3-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; }
+      #slider .slide h3, #slider .slide .h3 {
+        color: #fff;
+        font-family: "Mazda Type", helvetica, arial, sans-serif;
+        font-size: 4.375rem;
+        font-weight: 700;
+        line-height: 1;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%); }
+        #slider .slide h3 span, #slider .slide .h3 span {
+          display: block;
+          font-size: 1.75rem;
+          font-weight: 400; } }
 
 #noticias {
   padding: 50px 0 0; }
@@ -4640,6 +4727,14 @@ header {
         font-size: 1rem;
         font-weight: 400;
         line-height: 18px; } }
+
+@media (max-width: 600px) {
+  #noticias .text {
+    order: 2; }
+    #noticias .text h4, #noticias .text .h4 {
+      font-size: 1.25rem; }
+    #noticias .text p {
+      font-size: 1rem; } }
 
 #faqs {
   padding: 100px 0 80px; }
@@ -4732,6 +4827,7 @@ header {
     background: #FFFFFF;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 2px;
+    margin: 0 0 20px;
     padding: 0 10px;
     opacity: 0.8; }
   #contactanos textarea {
@@ -4786,6 +4882,13 @@ footer {
     font: normal normal normal 19px/23px "Mazda Type", helvetica, arial, sans-serif;
     color: #000000;
     text-transform: uppercase; }
+
+@media (max-width: 600px) {
+  footer img {
+    display: block;
+    margin: 0 auto; }
+  footer p {
+    text-align: center; } }
 
 @media (min-width: 1400px) {
   .container,
