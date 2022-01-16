@@ -35,6 +35,7 @@ header {
 
 		.item-menu {
 			color: $white;
+			cursor: pointer;
 			font-family: $font;
 			font-size: remcalc(18px);
 			font-weight: 700;
@@ -139,7 +140,9 @@ header {
 				cursor: pointer;
 
 				img{
-					width: 100%;
+					width: 70%;
+					display: block;
+					margin: 0 auto;
 				}
 				h4{
 					color: $white;
@@ -215,11 +218,16 @@ header {
 				}
 			}
 			.d-flex{
-				h4{
-					font-size: remcalc(18px);
-				}
-				p{
-					font-size: remcalc(14px);
+				.article{
+					img{
+						width: 100%;
+					}
+					h4{
+						font-size: remcalc(18px);
+					}
+					p{
+						font-size: remcalc(14px);
+					}
 				}
 			}
 		}

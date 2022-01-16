@@ -51,7 +51,6 @@ html {
 body{
 	overflow-x: hidden;
 }
-
 .pad-0 {
 	padding-left: 0;
 	padding-right: 0;
@@ -65,11 +64,11 @@ body{
 @import "footer";
 
 @include media-breakpoint-up(xxl) {
-		.container,
-		.container-lg,
-		.container-md,
-		.container-sm,
-		.container-xl {
-				max-width: 80%;
-		}
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl {
+			max-width: 80%;
+	}
 }

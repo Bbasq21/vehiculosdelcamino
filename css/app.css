@@ -4446,6 +4446,7 @@ header {
       width: 60%; } }
   header .menu .item-menu {
     color: #fff;
+    cursor: pointer;
     font-family: "Mazda Type", helvetica, arial, sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
@@ -4523,7 +4524,9 @@ header {
       header .sub-menu .d-flex .article {
         cursor: pointer; }
         header .sub-menu .d-flex .article img {
-          width: 100%; }
+          width: 70%;
+          display: block;
+          margin: 0 auto; }
         header .sub-menu .d-flex .article h4, header .sub-menu .d-flex .article .h4 {
           color: #fff;
           font-family: "Mazda Type", helvetica, arial, sans-serif;
@@ -4578,9 +4581,11 @@ header {
         display: flex; }
         header .sub-menu .col-12.col-md-2 .autos {
           font-size: 1rem; }
-      header .sub-menu .d-flex h4, header .sub-menu .d-flex .h4 {
+      header .sub-menu .d-flex .article img {
+        width: 100%; }
+      header .sub-menu .d-flex .article h4, header .sub-menu .d-flex .article .h4 {
         font-size: 1.125rem; }
-      header .sub-menu .d-flex p {
+      header .sub-menu .d-flex .article p {
         font-size: 0.875rem; }
     header .hamburger {
       position: fixed;
