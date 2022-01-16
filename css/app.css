@@ -4409,6 +4409,9 @@ progress {
   padding: 0;
   margin: 0; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   overflow-x: hidden; }
 
@@ -4458,9 +4461,9 @@ header {
       left: 0;
       position: absolute;
       transition: ease-in-out .5s; }
-    header .menu .item-menu:hover {
+    header .menu .item-menu:hover, header .menu .item-menu.active {
       color: #8e1c2e; }
-      header .menu .item-menu:hover::after {
+      header .menu .item-menu:hover::after, header .menu .item-menu.active::after {
         background-color: #8e1c2e; }
   header .menu .search {
     border: solid 1px #fff;
@@ -4485,6 +4488,54 @@ header {
       top: 50%;
       right: 15px;
       transform: translateY(-50%); }
+  header .sub-menu {
+    width: 70%;
+    background: #575757;
+    border-radius: 2px;
+    display: flex;
+    padding: 0 10px;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99; }
+    header .sub-menu .autos {
+      width: 100%;
+      height: 40px;
+      background: #888;
+      border-radius: 2px;
+      display: block;
+      color: #fff;
+      font-family: "Mazda Type", helvetica, arial, sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin: 20px 0;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: ease-in-out .5s; }
+      header .sub-menu .autos:hover {
+        background-color: #8e1c2e; }
+      header .sub-menu .autos.collapsed {
+        background: #8e1c2e; }
+    header .sub-menu .d-md-flex {
+      flex-wrap: wrap; }
+      header .sub-menu .d-md-flex .article {
+        cursor: pointer; }
+        header .sub-menu .d-md-flex .article h4, header .sub-menu .d-md-flex .article .h4 {
+          color: #fff;
+          font-family: "Mazda Type", helvetica, arial, sans-serif;
+          font-size: 1.375rem;
+          font-weight: 500;
+          line-height: 1;
+          text-align: center; }
+        header .sub-menu .d-md-flex .article p {
+          color: #fff;
+          font-family: "Mazda Type", helvetica, arial, sans-serif;
+          font-size: 1.125rem;
+          font-weight: 400;
+          line-height: 1;
+          text-align: center; }
   header.fixed {
     width: 100%;
     position: fixed;

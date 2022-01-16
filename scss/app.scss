@@ -1,16 +1,16 @@
 @function remcalc($size) {
-    $remSize: $size / 16px;
-    //Default font size on html element is 100%, equivalent to 16px;
-    @return #{$remSize}rem;
+	$remSize: $size / 16px;
+	//Default font size on html element is 100%, equivalent to 16px;
+	@return #{$remSize}rem;
 }
-  
-  // Mixin that will include the fall back px declaration as well as the calculated rem value.
+	
+	// Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin fontSize($size) {
-    font-size: $size;
-    font-size: remcalc($size);
+	font-size: $size;
+	font-size: remcalc($size);
 }
 :root{
-    font-size: 100%;
+	font-size: 100%;
 }
 
 @import "../node_modules/bootstrap/scss/functions";
@@ -41,18 +41,20 @@ $font: 'Mazda Type',helvetica,arial,sans-serif;
 @import "fonts";
 
 * {
-  border: 0;
-  padding: 0;
-  margin: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 body{
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 .pad-0 {
-  padding-left: 0;
-  padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 @import "header";
@@ -63,11 +65,11 @@ body{
 @import "footer";
 
 @include media-breakpoint-up(xxl) {
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl {
-        max-width: 80%;
-    }
+		.container,
+		.container-lg,
+		.container-md,
+		.container-sm,
+		.container-xl {
+				max-width: 80%;
+		}
 }
