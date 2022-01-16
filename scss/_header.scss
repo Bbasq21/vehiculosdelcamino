@@ -107,7 +107,7 @@ header {
 		top: 100px;
 		left: 50%;
 		transform: translateX(-50%);
-		z-index: 99;
+		z-index: 9999;
 
 		.autos{
 			width: 100%;
@@ -132,12 +132,15 @@ header {
 				background: $red;
 			}
 		}
-		.d-md-flex{
+		.d-flex{
 			flex-wrap: wrap;
 
 			.article{
 				cursor: pointer;
 
+				img{
+					width: 100%;
+				}
 				h4{
 					color: $white;
 					font-family: $font;
@@ -196,6 +199,28 @@ header {
 
 			&.is-active{
 				left: 0;
+			}
+		}
+		.sub-menu{
+			width: 100%;
+			display: block;
+			top: 100px;
+			height: calc(100vh - 100px);
+			
+			.col-12.col-md-2{
+				display: flex;
+				
+				.autos{
+					font-size: remcalc(16px);
+				}
+			}
+			.d-flex{
+				h4{
+					font-size: remcalc(18px);
+				}
+				p{
+					font-size: remcalc(14px);
+				}
 			}
 		}
 		.hamburger {

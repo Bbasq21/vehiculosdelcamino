@@ -3,13 +3,17 @@ $(document).ready(function () {
 	$(navItem).on('click', function () {
 		$(navItem).removeClass('active');
 		$(this).addClass('active');
+		$('header .hamburger').toggleClass('is-active');
+		$('header .menu').toggleClass('is-active');
 	});
 	$('.item-menu').eq(0).click(function(){
 		$('.sub-menu').toggleClass('d-none');
+		$('.item-menu').removeClass('d-none');
 	});
 	$('.hamburger').click(function() {
 		$('header .hamburger').toggleClass('is-active');
 		$('header .menu').toggleClass('is-active');
+		$('.sub-menu').addClass('d-none');
 		return false;
 	});
 	var altura = $('header').offset().top;
@@ -59,4 +63,9 @@ $(document).ready(function () {
 	    }, 500);
 	    return false;
 	}); 
+	if ($(window).width() < 768) {
+		$('.article').click(function(){
+			$('.sub-menu').addClass('d-none');
+		});
+	}
 });

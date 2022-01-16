@@ -4498,7 +4498,7 @@ header {
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 99; }
+    z-index: 9999; }
     header .sub-menu .autos {
       width: 100%;
       height: 40px;
@@ -4518,18 +4518,20 @@ header {
         background-color: #8e1c2e; }
       header .sub-menu .autos.collapsed {
         background: #8e1c2e; }
-    header .sub-menu .d-md-flex {
+    header .sub-menu .d-flex {
       flex-wrap: wrap; }
-      header .sub-menu .d-md-flex .article {
+      header .sub-menu .d-flex .article {
         cursor: pointer; }
-        header .sub-menu .d-md-flex .article h4, header .sub-menu .d-md-flex .article .h4 {
+        header .sub-menu .d-flex .article img {
+          width: 100%; }
+        header .sub-menu .d-flex .article h4, header .sub-menu .d-flex .article .h4 {
           color: #fff;
           font-family: "Mazda Type", helvetica, arial, sans-serif;
           font-size: 1.375rem;
           font-weight: 500;
           line-height: 1;
           text-align: center; }
-        header .sub-menu .d-md-flex .article p {
+        header .sub-menu .d-flex .article p {
           color: #fff;
           font-family: "Mazda Type", helvetica, arial, sans-serif;
           font-size: 1.125rem;
@@ -4567,6 +4569,19 @@ header {
         margin: 20px auto 0; }
       header .menu.is-active {
         left: 0; }
+    header .sub-menu {
+      width: 100%;
+      display: block;
+      top: 100px;
+      height: calc(100vh - 100px); }
+      header .sub-menu .col-12.col-md-2 {
+        display: flex; }
+        header .sub-menu .col-12.col-md-2 .autos {
+          font-size: 1rem; }
+      header .sub-menu .d-flex h4, header .sub-menu .d-flex .h4 {
+        font-size: 1.125rem; }
+      header .sub-menu .d-flex p {
+        font-size: 0.875rem; }
     header .hamburger {
       position: fixed;
       background-color: transparent;
